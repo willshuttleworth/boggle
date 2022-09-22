@@ -102,3 +102,8 @@ fn load_board(fname: &str) -> Array2D<char> {
     }
     the_board
 }
+
+#[test]
+fn tester() {
+    assert_eq!("ur mom", "ur mom");
+}
