@@ -1,5 +1,3 @@
-//replace all type casts with ru or cu
-//make board array instead of vector?
 use array2d::Array2D;
 use std::env;
 use std::fs::File;
@@ -15,10 +13,8 @@ fn main() {
     let len = board.num_rows() as i8;
     //write function to do dfs for every cell in board
     //nested for loops to do this function on every cell
-    //function will take board as param, return nothing but board passed in will be mutable?
     for i in 0..len {
         for j in 0..len {
-            //call dfs for every cell here 
             dfs(i, j, String::new(), &mut board, len);
         }
     }
@@ -101,9 +97,4 @@ fn load_board(fname: &str) -> Array2D<char> {
         }
     }
     the_board
-}
-
-#[test]
-fn tester() {
-    assert_eq!("ur mom", "ur mom");
 }
